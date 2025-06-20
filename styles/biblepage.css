@@ -1,0 +1,63 @@
+.verse-title, .transliteration, .translation {
+    color: rgb(200, 200, 200);
+}
+
+.transliteration, .translation {
+    font-family: 'Amiri', sans-serif;
+    font-size: 20px;
+}
+
+.bible-container {
+    display: flex;
+}
+
+.chapterlist-container {
+    width: 35vw;
+}
+
+.verses-container {
+    width: 65vw;
+    text-align: right;
+    padding-right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+
+.verse-title {
+    font-size: 45px;
+}
+
+.verse-text {
+    font-size: 35px;
+    font-weight: normal;
+}
+
+.verse-text .cairo, .verse-text .gandhara {
+    font-size: 25px;
+}
+
+.verse-flex {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 25px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+td a {
+    padding: 2px;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.law {
+    background: rgba(255, 155, 0, 0.75);
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa:wght@400;700&family=Beiruti:wght@200..900&family=Cairo:wght@200..1000&family=Noto+Naskh+Arabic:wght@400..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Beiruti', sans-serif;
+}
+
+@font-face {
+    font-family: 'Thuluth';
+    src: url(../fonts/AMoshref\ Thulth.ttf);
+}
+
+@font-face {
+    font-family: 'Thuluth-Gandhara';
+    src: url(../fonts/Gandhara\ Suls\ Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Kufi-Granada';
+    src: url(../fonts/Granada\ Regular\ -\ [UrduFonts.com].ttf);
+}
+
+.title-container {
+    text-align: center;
+    padding-top: 3vh;
+    padding-bottom: 3vw;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.subtitle {
+    font-size: 45px;
+}
+
+.amoshref {
+    font-family: 'Thuluth', sans-serif;
+}
+
+.gandhara {
+    font-family: 'Thuluth-Gandhara', sans-serif;
+}
+
+.amiri {
+    font-family: 'Amiri', sans-serif;
+}
+
+.cairo {
+    font-family: 'Cairo', sans-serif;
+}
+
+.granada {
+    font-family: 'Kufi-Granada', sans-serif;
+}
+
+.aref {
+    font-family: 'Aref Ruqaa', sans-serif;
+}
+
+.naskh {
+    font-family: 'Noto Naskh Arabic', sans-serif;
+}
