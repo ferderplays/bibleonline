@@ -12,10 +12,15 @@
 }
 
 .chapterlist-container {
-    width: 35vw;
+    position: fixed;
+    width: 25vw;
+    top: 50px;
+    overflow-y: scroll;
+    height: calc(100vh - 50px);
 }
 
 .verses-container {
+    margin-left: 25vw;
     width: 65vw;
     text-align: right;
     padding-right: 25px;
@@ -58,6 +63,46 @@ td a {
     padding-right: 15px;
 }
 
+.purpose {
+    font-size: 35px;
+}
+
 .law {
-    background: rgba(255, 155, 0, 0.75);
+    background: rgba(255, 155, 0, 0.5);
+}
+
+.orange {
+    color: rgba(255, 155, 0, 0.5);
+}
+
+.history {
+    background: rgba(0, 255, 255, 0.5);
+}
+
+.lightblue {
+    color: rgba(0, 255, 255, 0.5);
+}
+
+.poetry {
+    background: rgba(255, 0, 255, 0.5);
+}
+
+.magenta {
+    color: rgba(255, 0, 255, 0.5);
+}
+
+.majorprophets {
+    background: rgba(11, 218, 81, 0.5);
+}
+
+.malachite {
+    color: rgba(11, 218, 81, 0.5);
+}
+
+.prophets {
+    background: rgba(0, 100, 0, 0.5);
+}
+
+.green {
+    color: rgba(0, 100, 0, 0.5);
 }
