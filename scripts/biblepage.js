@@ -9,3 +9,13 @@ $("#settingstoggle").click(function() {
         areSettingsOpened = true;
     }
 });
+
+$(window).on("scroll", function() {
+    if ($(window).scrollTop()) {
+        $("header").addClass("fixed");
+        $(".chapterlist-container").addClass("floating");
+    } else {
+        $("header").removeClass("fixed");
+        $(".chapterlist-container").removeClass("floating");
+    }
+});

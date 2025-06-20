@@ -7,20 +7,36 @@
     font-size: 20px;
 }
 
+.fixed {
+    position: fixed;
+    top: 0;
+}
+
+.floating {
+    position: fixed;
+    top: 50px;
+}
+
 .bible-container {
     display: flex;
 }
 
 .chapterlist-container {
     position: fixed;
+    top: 25px;
+    height: 97vh;
     width: 25vw;
-    top: 50px;
     overflow-y: scroll;
-    height: calc(100vh - 50px);
+    background: rgb(215, 215, 215);
+    z-index: 2;
+}
+
+.left-side {
+    width: 35vw;
+    height: 100%;
 }
 
 .verses-container {
-    margin-left: 25vw;
     width: 65vw;
     text-align: right;
     padding-right: 25px;
@@ -105,4 +121,45 @@ td a {
 
 .green {
     color: rgba(0, 100, 0, 0.5);
+}
+
+.gospels {
+    background: rgba(255, 215, 0, 0.5);
+}
+
+.gold {
+    color: rgba(255, 215, 0, 0.5);
+}
+
+.letters {
+    background: rgba(255, 0, 0, 0.5);
+}
+
+.red {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+.otherletters {
+    background: rgba(100, 0, 0, 0.5);
+}
+
+.darkred {
+    color: rgba(100, 0, 0, 0.5);
+}
+
+.prophecy {
+    background: rgba(100, 0, 200, 0.5);
+}
+
+.purple {
+    color: rgba(100, 0, 200, 0.5);
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0099ff;
+    border-radius: 25px;
 }
