@@ -6,6 +6,10 @@ let isMoshrefUsed = true,
     isNaskhUsed = false, // noto naskh arabic font
     isArefUsed = false;
 
+let isThuluthSelected = true,
+    isNaskhSelected = false,
+    isModernSelected = false;
+
 $("#moshreftoggle").click(function() {
     if (isMoshrefUsed) {
         console.log("Moshref is already in use");
