@@ -76,6 +76,8 @@ $("#frakturenable").click(function() {
         } else { $(".verse-text").addClass("unifraktur"); }
         $("#unifrakturtoggle").addClass("selected-style");
         isUnifrakturUsed = true;
+        isBeirutiUsed = false;
+        isAmiriUsed = false;
 
         // makes only fraktur fonts display in the settings
         $(".unselected").removeClass("unselected");
@@ -98,7 +100,10 @@ $("#modernenable").click(function() {
         // applies the default modern font
         $(".verse-text").removeClass("unifraktur");
         $("#beirutitoggle").addClass("selected-style");
+        $("#amiritoggle").removeClass("selected-style");
         isBeirutiUsed = true;
+        isUnifrakturUsed = false;
+        isAmiriUsed = false;
 
         // makes only modern fonts display in the settings
         $(".unselected").removeClass("unselected");

@@ -4,7 +4,7 @@
 
 .transliteration, .translation {
     font-family: 'Amiri', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .fixed {
@@ -21,44 +21,62 @@
     display: flex;
 }
 
+.grouping {
+    font-size: 35px;
+}
+
 .chapterlist-container {
     position: fixed;
     top: 25px;
     height: 97vh;
-    width: 25vw;
+    width: 23vw;
     overflow-y: scroll;
     z-index: 2;
     background: white;
-    display: flex;
 }
 
 .chapterlist a {
-    color: black;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(175, 175, 175);
+    transition: all 0.25s ease-in;
+}
+
+.booklist {
+    display: flex;
 }
 
 .left-side {
-    width: 25vw;
+    width: 23vw;
     height: 100%;
     background: rgb(215, 215, 215);
 }
 
 .verses-container {
     background: rgb(215, 215, 215);
-    width: 75vw;
     text-align: right;
     padding-right: 25px;
     display: flex;
     flex-direction: column;
     gap: 75px;
+    padding-left: 25px;
+}
+
+.wide {
+    width: 77vw;
+}
+
+.slim {
+    width: calc(66vw - 75px);
 }
 
 .verse-title {
-    font-size: 45px;
+    font-size: 25px;
 }
 
 .verse-text {
-    font-size: 35px;
+    font-size: 25px;
     font-weight: normal;
     transition: all 0.25s ease-in;
 }
@@ -83,15 +101,28 @@ td a {
     border-radius: 5px;
     color: black;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 15px;
     padding-left: 15px;
     padding-right: 15px;
 }
 
 .purpose {
-    font-size: 35px;
+    font-size: 25px;
 }
 
+.settings-container {
+    width: 15vw;
+    padding-left: 20px;
+}
+
+.settings-grouping {
+    font-size: 27px;
+}
+.settings-subgrouping {
+    font-size: 22px;
+}
+
+/* Base color pallete */
 .law {
     background: rgba(255, 155, 0, 0.5);
 }
@@ -164,6 +195,37 @@ td a {
     color: rgba(100, 0, 200, 0.5);
 }
 
+/* RGB mode color palette */
+.rgbmode .law {
+    background: rgba(255, 0, 0, 0.5);
+}
+
+.rgbmode .orange {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+.rgbmode .history {
+    background: rgba(255, 155, 0, 0.5);
+}
+
+.rgbmode .lightblue {
+    color: rgba(255, 155, 0, 0.5);
+}
+
+.rgbmode .poetry {
+    background: rgba(255, 255, 0, 0.5);
+}
+
+.rgbmode .magenta {
+    color: rgba(255, 255, 0, 0.5);
+}
+
+.rgbmode .majorprophets {
+    background: rgba(155, 255, 0, 0.5);
+}
+
+/* Scrollbar stuff */
+
 ::-webkit-scrollbar {
     background: transparent;
 }
@@ -190,7 +252,7 @@ td a {
     transition: all 0.25s ease-in;
 }
 
-.options-container button.selected, .options-container button.selected-style {
+.options-container button.selected, .options-container button.selected-style, .options-container button.selected-pallete {
     background: rgb(215, 215, 215);
     border-radius: 25px;
 }
