@@ -61,8 +61,7 @@ $("#readmode").click(function() {
         console.log("Read mode is already activated");
         return;
     } else {
-        $(".hidden-mode").removeClass("hidden-mode");
-        $(".versemode").addClass("hidden-mode");
+        $(".verses-container").removeClass("versemode");
 
         $(".selected-mode").removeClass("selected-mode");
         $("#readmode").addClass("selected-mode");
@@ -77,8 +76,7 @@ $("#versemode").click(function() {
         console.log("Verse mode is already activated");
         return;
     } else {
-        $(".hidden-mode").removeClass("hidden-mode");
-        $(".readmode").addClass("hidden-mode");
+        $(".verses-container").addClass("versemode");
         
         $(".selected-mode").removeClass("selected-mode");
         $("#versemode").addClass("selected-mode");

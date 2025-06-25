@@ -1,196 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible Online</title>
-    <link rel="stylesheet" href="../styles/allpages.css">
-    <link rel="stylesheet" href="../styles/biblepage.css">
-    <link rel="stylesheet" href="../styles/animations/biblepage.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-</head>
-<body>
-    <div class="page">
-        <header>
-            <div>
-                <a href="/">Bible Online</a>
-            </div>
-            <div class="options-container">
-                <button id="versemode">Verse Mode</button>
-                <button id="readmode" class="selected-mode">Read Mode</button>
-            </div>
-            <button id="settingstoggle">Settings</button>
-        </header>
-        <div class="title-container">
-            <h3 class="title">The Holy Bible</h3>
-            <h2 class="subtitle">The Book of Life</h2>
-        </div>
-        <div class="bible-container">
-            <div class="chapterlist-container">
-                <h2 class="grouping">The Old Testament</h2>
-                <div class="booklist">
-                    <div class="memorizationcolors">
-                        <table>
-                            <tr>
-                                <td>
-                                    <a href="#genesis" class="law">Genesis...</a><br>
-                                    <a href="#exodus" class="law">Exodus...</a><br>
-                                    <a href="#leviticus" class="law">Leviticus...</a><br>
-                                    <a href="#numbers" class="law">Numbers...</a><br>
-                                    <a href="#deuteronomy" class="law">Deuteronomy...</a>
-                                </td>
-                                <th class="purpose orange">
-                                    Law
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#joshua" class="history">Joshua...</a><br>
-                                    <a href="#judges" class="history">Judges...</a><br>
-                                    <a href="#ruth" class="history">Ruth...</a><br>
-                                    <a href="#1samuel" class="history">1st Samuel...</a><br>
-                                    <a href="#2samuel" class="history">2nd Samuel...</a><br>
-                                    <a href="#1kings" class="history">1st Kings...</a><br>
-                                    <a href="#2kings" class="history">2nd Kings...</a><br>
-                                    <a href="#1chronicles" class="history">1st Chronicles...</a><br>
-                                    <a href="#2chronicles" class="history">2nd Chronicles...</a><br>
-                                    <a href="#ezra" class="history">Ezra...</a><br>
-                                    <a href="#nehemiah" class="history">Nehemiah...</a><br>
-                                    <a href="#esther" class="history">Esther...</a>
-                                </td>
-                                <th class="purpose lightblue">
-                                    History
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#job" class="poetry">Job...</a><br>
-                                    <a href="#psalms" class="poetry">Psalms...</a><br>
-                                    <a href="#proverbs" class="poetry">Proverbs...</a><br>
-                                    <a href="#ecclesiastes" class="poetry">Ecclesiastes...</a><br>
-                                    <a href="#songsofsolomon" class="poetry">Songs of Solomon...</a>
-                                </td>
-                                <th class="purpose magenta">
-                                    Poetry
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#isaiah" class="majorprophets">Isaiah...</a><br>
-                                    <a href="#jeremiah" class="majorprophets">Jeremiah...</a><br>
-                                    <a href="#lamentations" class="majorprophets">Lamentations...</a><br>
-                                    <a href="#ezekiel" class="majorprophets">Ezekiel...</a><br>
-                                    <a href="#daniel" class="majorprophets">Daniel...</a>
-                                </td>
-                                <th class="purpose malachite">
-                                    Major Prophets
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#hosea" class="prophets">Hosea...</a><br>
-                                    <a href="#joel" class="prophets">Joel...</a><br>
-                                    <a href="#amos" class="prophets">Amos...</a><br>
-                                    <a href="#obadiah" class="prophets">Obadiah...</a><br>
-                                    <a href="#jonah" class="prophets">Jonah...</a><br>
-                                    <a href="#micah" class="prophets">Micah...</a><br>
-                                    <a href="#nahum" class="prophets">Nahum...</a><br>
-                                    <a href="#habakkuk" class="prophets">Habakkuk...</a><br>
-                                    <a href="#zephaniah" class="prophets">Zephaniah...</a><br>
-                                    <a href="#haggai" class="prophets">Haggai...</a><br>
-                                    <a href="#zechariah" class="prophets">Zechariah...</a><br>
-                                    <a href="#malachi" class="prophets">Malachi...</a>
-                                </td>
-                                <th class="purpose green">
-                                    Other Prophets
-                                </th>
-                            </tr>
-                        </table>
-                        <h2 class="grouping">The New Testament</h2>
-                        <table>
-                            <tr>
-                                <td>
-                                    <a href="#mathew" class="gospels">Mathew...</a><br>
-                                    <a href="#mark" class="gospels">Mark...</a><br>
-                                    <a href="#luke" class="gospels">Luke...</a><br>
-                                    <a href="#john" class="gospels">John...</a>
-                                </td>
-                                <th class="purpose gold">
-                                    The Gospels
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#acts" class="history">Acts...</a>
-                                </td>
-                                <th class="purpose lightblue">
-                                    History
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#romans" class="letters">Romans...</a><br>
-                                    <a href="#1corinthians" class="letters">1st Corinthians...</a><br>
-                                    <a href="#2corinthians" class="letters">2nd Corinthians...</a><br>
-                                    <a href="#galatians" class="letters">Galatians...</a><br>
-                                    <a href="#ephesians" class="letters">Ephesians...</a><br>
-                                    <a href="#philippians" class="letters">Philippians...</a><br>
-                                    <a href="#colossians" class="letters">Colossians...</a><br>
-                                    <a href="#1thessalonians" class="letters">1st Thessalonians...</a><br>
-                                    <a href="#2thessalonians" class="letters">2nd Thessalonians...</a><br>
-                                    <a href="#1timothy" class="letters">1st Timothy...</a><br>
-                                    <a href="#2timothy" class="letters">2nd Timothy...</a><br>
-                                    <a href="#titus" class="letters">Titus...</a><br>
-                                    <a href="#philemon" class="letters">Philemon...</a>
-                                </td>
-                                <th class="purpose red">
-                                    Paul's Letters
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#hebrews" class="otherletters">Hebrews...</a><br>
-                                    <a href="#james" class="otherletters">James...</a><br>
-                                    <a href="#1peter" class="otherletters">1st Peter...</a><br>
-                                    <a href="#2peter" class="otherletters">2nd Peter...</a><br>
-                                    <a href="#1john" class="otherletters">1st John...</a><br>
-                                    <a href="#2john" class="otherletters">2nd John...</a><br>
-                                    <a href="#3john" class="otherletters">3rd John...</a><br>
-                                    <a href="#jude" class="otherletters">Jude...</a>
-                                </td>
-                                <th class="purpose darkred">
-                                    Other Letters
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#revelation1" class="prophecy">Revelation...</a>
-                                </td>
-                                <th class="purpose purple">
-                                    Prophecy
-                                </th>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="chapterlist">
-                        <a href="#thebeginning">The Beginning</a><br>
-                        <a href="#adamandeve">Adam and Eve</a><br>
-                        <a href="#thefall">The Fall</a><br>
-                        <a href="#cainandabel">Cain and Abel</a><br>
-                        <a href="#fromadamtonoah">From Adam to Noah</a><br>
-                        <a href="#wickednessintheworld">Wickedness in the World</a><br>
-                        <a href="#noahandtheflood">Noah and the Flood</a><br>
-                        <a href="#godscovenantwithnoah">God’s Covenant With Noah</a><br>
-                        <a href="#sonsofnoah">The Sons of Noah</a><br>
-                        <a href="#thetableofnations">The Table of Nations</a>
-                    </div>
-                </div>
-            </div>
-            <div class="left-side"></div>
-            <div class="verses-container wide">
-                <h2 class="subtitle" id="genesis">The Book of Genesis</h2>
-                <h2 class="subtitle" id="thebeginning">The Beginning</h2>
-                <long class="verse-text">
+<long class="verse-text">
                     <long class="verse-title"><span class="hidden-text"><span class="hidden-text"></span>Genesis 1:</span></span>1</long>
                     In the beginning God created the heavens and the earth.
                 </long>
@@ -315,7 +123,7 @@
                     God saw all that he had made, and it was very good. And there was evening, and there was morning — the sixth day.
                 </long>
                 <long class="verse-text">
-                    <long class="verse-title">Genesis 2:1</long>
+                    <long class="verse-title"><span class="hidden-text"></span>Genesis 2:</span>1</long>
                     Thus the heavens and the earth were completed in all their vast array.
                 </long>
                 <long class="verse-text">
@@ -837,7 +645,7 @@
                     Noah did everything just as God commanded him.
                 </long>
                 <long class="verse-text">
-                    <long class="verse-title">Genesis 7:1</long>
+                    <long class="verse-title"><span class="hidden-text">Genesis 7:</span>1</long>
                     The Lord then said to Noah, “Go into the ark, you and your whole family, because I have found you righteous in this generation.
                 </long>
                 <long class="verse-text">
@@ -933,7 +741,7 @@
                     The waters flooded the earth for a hundred and fifty days.
                 </long>
                 <long class="verse-text">
-                    <long class="verse-title">Genesis 8:1</long>
+                    <long class="verse-title"><span class="hidden-text">Genesis 8:</span>1</long>
                     But God remembered Noah and all the wild animals and the livestock that were with him in the ark, and he sent a wind over the earth, and the waters receded.
                 </long>
                 <long class="verse-text">
@@ -1143,7 +951,7 @@
                     <long class="verse-title"><span class="hidden-text">Genesis 10:</span>1</long>
                     This is the account of Shem, Ham and Japheth, Noah’s sons, who themselves had sons after the flood.
                 </long>
-                <h2 class="grouping">The Japhethites</h2>
+                <long class="grouping">The Japhethites</long>
                 <long class="verse-text">
                     <long class="verse-title"><span class="hidden-text">Genesis 10:</span>2</long>
                     The sons of Japheth: Gomer, Magog, Madai, Javan, Tubal, Meshek and Tiras.
@@ -1160,7 +968,7 @@
                     <long class="verse-title"><span class="hidden-text">Genesis 10:</span>5</long>
                     (From these the maritime peoples spread out into their territories by their clans within their nations, each with its own language.)
                 </long>
-                <h2 class="grouping">The Hamites</h2>
+                <long class="grouping">The Hamites</long>
                 <long class="verse-text">
                     <long class="verse-title"><span class="hidden-text">Genesis 10:</span>6</long>
                     The sons of Ham: Cush, Egypt, Put and Canaan.
@@ -1209,28 +1017,3 @@
                     <long class="verse-title"><span class="hidden-text">Genesis 10:</span>17</long>
                     Hivites, Arkites, Sinites,
                 </long>
-            </div>
-            <div class="settings-container hidden">
-                <h3 class="settings-grouping">Script</h3>
-                <div class="options-container" id="scripttoggler">
-                    <button id="frakturenable">Fraktur</button>
-                    <button id="modernenable" class="selected">Modern</button>
-                </div>
-                <h3 class="settings-subgrouping">Style</h3>
-                <div class="options-container">
-                    <button id="beirutitoggle" class="selected-style">Beiruti</button>
-                    <button id="amiritoggle">Amiri</button>
-                    <button id="unifrakturtoggle" class="unselected">Unifraktur</button>
-                </div>
-                <h3 class="settings-grouping">Marker pallete:</h3>
-                <div class="options-container">
-                    <button id="basicenable" class="selected-pallete">Basic</button>
-                    <button id="rgbenable">RGB</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="../scripts/englishbiblepage.js"></script>
-    <script src="../scripts/biblepage.js"></script>
-</body>
-</html>

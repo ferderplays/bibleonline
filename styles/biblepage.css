@@ -61,10 +61,22 @@ header {
     background: rgb(200, 200, 200);
     text-align: right;
     padding-right: 25px;
-    display: flex;
-    flex-direction: column;
     gap: 75px;
     padding-left: 25px;
+}
+
+.versemode {
+    display: flex;
+    flex-direction: column;
+}
+
+.versemode .verse-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.versemode .hidden-text {
+    display: inline-block;
 }
 
 .wide {
@@ -100,7 +112,7 @@ header {
     font-weight: bold;
 }
 
-.hidden, .hidden-mode {
+.hidden, .hidden-mode, .hidden-text {
     display: none;
 }
 
