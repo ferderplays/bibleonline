@@ -7,6 +7,10 @@
     font-size: 15px;
 }
 
+.chapterlist-container, .settings-container {
+    background: rgb(215, 215, 215);
+}
+
 .fixed {
     position: fixed;
     top: 0;
@@ -32,7 +36,6 @@
     width: 23vw;
     overflow-y: scroll;
     z-index: 2;
-    background: white;
 }
 
 .chapterlist a {
@@ -50,11 +53,10 @@
 .left-side {
     width: 23vw;
     height: 100%;
-    background: rgb(215, 215, 215);
 }
 
 .verses-container {
-    background: rgb(215, 215, 215);
+    background: rgb(200, 200, 200);
     text-align: right;
     padding-right: 25px;
     display: flex;
@@ -107,7 +109,7 @@ td a {
 }
 
 .purpose {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .settings-container {
@@ -224,6 +226,50 @@ td a {
     background: rgba(155, 255, 0, 0.5);
 }
 
+.rgbmode .malachite {
+    color: rgba(155, 255, 0, 0.5);
+}
+
+.rgbmode .prophets {
+    background: rgba(0, 255, 0, 0.5);
+}
+
+.rgbmode .green {
+    color: rgba(0, 255, 0, 0.5);
+}
+
+.rgbmode .gospels {
+    background: rgba(0, 255, 155, 0.5);
+}
+
+.rgbmode .gold {
+    color: rgba(0, 255, 155, 0.5);
+}
+
+.rgbmode .letters {
+    background: rgba(0, 155, 255, 0.5);
+}
+
+.rgbmode .red {
+    color: rgba(0, 155, 255, 0.5);
+}
+
+.rgbmode .otherletters {
+    background: rgba(0, 0, 255, 0.5);
+}
+
+.rgbmode .darkred {
+    color: rgba(0, 0, 255, 0.5);
+}
+
+.rgbmode .prophecy {
+    background: rgba(255, 0, 255, 0.5);
+}
+
+.rgbmode .purple {
+    color: rgba(255, 0, 255, 0.5);
+}
+
 /* Scrollbar stuff */
 
 ::-webkit-scrollbar {
@@ -253,7 +299,7 @@ td a {
 }
 
 .options-container button.selected, .options-container button.selected-style, .options-container button.selected-pallete {
-    background: rgb(215, 215, 215);
+    background: rgb(200, 200, 200);
     border-radius: 25px;
 }
 

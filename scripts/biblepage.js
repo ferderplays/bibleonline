@@ -33,6 +33,8 @@ $("#rgbenable").click(function() {
         return;
     } else {
         $(".memorizationcolors").addClass("rgbmode");
+        $(".selected-pallete").removeClass("selected-pallete");
+        $("#rgbenable").addClass("selected-pallete");
         isMemorizationRGB = true;
         isMemorizationBasic = false;
     }
@@ -44,6 +46,8 @@ $("#basicenable").click(function() {
         return;
     } else {
         $(".memorizationcolors").removeClass("rgbmode");
+        $(".selected-pallete").removeClass("selected-pallete");
+        $("#basicenable").addClass("selected-pallete");
         isMemorizationBasic = true;
         isMemorizationRGB = false;
     }
