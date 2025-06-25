@@ -1,5 +1,5 @@
 .verse-title, .transliteration, .translation {
-    color: rgb(175, 175, 175);
+    color: rgb(225, 225, 225);
 }
 
 .transliteration, .translation {
@@ -7,18 +7,20 @@
     font-size: 15px;
 }
 
-.chapterlist-container, .settings-container {
+.chapterlist-container, .settings-container, header {
     background: rgb(215, 215, 215);
+}
+
+header {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .fixed {
     position: fixed;
     top: 0;
-}
-
-.floating {
-    position: fixed;
-    top: 50px;
 }
 
 .bible-container {
@@ -31,7 +33,7 @@
 
 .chapterlist-container {
     position: fixed;
-    top: 25px;
+    top: 50px;
     height: 97vh;
     width: 23vw;
     overflow-y: scroll;
@@ -94,7 +96,11 @@
     text-align: center;
 }
 
-.hidden {
+.verse-number {
+    font-weight: bold;
+}
+
+.hidden, .hidden-mode {
     display: none;
 }
 
@@ -298,7 +304,7 @@ td a {
     transition: all 0.25s ease-in;
 }
 
-.options-container button.selected, .options-container button.selected-style, .options-container button.selected-pallete {
+.options-container button.selected, .options-container button.selected-style, .options-container button.selected-pallete, button.selected-mode {
     background: rgb(200, 200, 200);
     border-radius: 25px;
 }

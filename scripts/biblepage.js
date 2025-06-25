@@ -3,6 +3,9 @@ let areSettingsOpened = false;
 let isMemorizationBasic = true,
     isMemorizationRGB = false;
 
+let isReadModeActivated = true,
+    isVerseModeActivated = false;
+
 $("#settingstoggle").click(function() {
     if (areSettingsOpened) {
         $(".settings-container").addClass("hidden");
@@ -50,5 +53,37 @@ $("#basicenable").click(function() {
         $("#basicenable").addClass("selected-pallete");
         isMemorizationBasic = true;
         isMemorizationRGB = false;
+    }
+});
+
+$("#readmode").click(function() {
+    if (isReadModeActivated) {
+        console.log("Read mode is already activated");
+        return;
+    } else {
+        $(".hidden-mode").removeClass("hidden-mode");
+        $(".versemode").addClass("hidden-mode");
+
+        $(".selected-mode").removeClass("selected-mode");
+        $("#readmode").addClass("selected-mode");
+
+        isReadModeActivated = true;
+        isVerseModeActivated = false;
+    }
+});
+
+$("#versemode").click(function() {
+    if (isVerseModeActivated) {
+        console.log("Verse mode is already activated");
+        return;
+    } else {
+        $(".hidden-mode").removeClass("hidden-mode");
+        $(".readmode").addClass("hidden-mode");
+        
+        $(".selected-mode").removeClass("selected-mode");
+        $("#versemode").addClass("selected-mode");
+
+        isVerseModeActivated = true;
+        isReadModeActivated = false;
     }
 });

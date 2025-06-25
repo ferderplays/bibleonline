@@ -12,6 +12,13 @@
 <body>
     <div class="page">
         <header>
+            <div>
+                <a href="/">Bible Online</a>
+            </div>
+            <div class="options-container">
+                <button id="versemode">Verse Mode</button>
+                <button id="readmode" class="selected-mode">Read Mode</button>
+            </div>
             <button id="settingstoggle">Settings</button>
         </header>
         <div class="title-container">
@@ -26,11 +33,11 @@
                         <table>
                             <tr>
                                 <td>
-                                    <a href="#genesis1" class="law">Genesis...</a><br>
-                                    <a href="#exodus1" class="law">Exodus...</a><br>
-                                    <a href="#leviticus1" class="law">Leviticus...</a><br>
-                                    <a href="#numbers1" class="law">Numbers...</a><br>
-                                    <a href="#deuteronomy1" class="law">Deuteronomy...</a>
+                                    <a href="#genesis" class="law">Genesis...</a><br>
+                                    <a href="#exodus" class="law">Exodus...</a><br>
+                                    <a href="#leviticus" class="law">Leviticus...</a><br>
+                                    <a href="#numbers" class="law">Numbers...</a><br>
+                                    <a href="#deuteronomy" class="law">Deuteronomy...</a>
                                 </td>
                                 <th class="purpose orange">
                                     Law
@@ -38,18 +45,18 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="#joshua1" class="history">Joshua...</a><br>
-                                    <a href="#judges1" class="history">Judges...</a><br>
-                                    <a href="#ruth1" class="history">Ruth...</a><br>
-                                    <a href="#1samuel1" class="history">1st Samuel...</a><br>
-                                    <a href="#2samuel1" class="history">2nd Samuel...</a><br>
-                                    <a href="#1kings1" class="history">1st Kings...</a><br>
-                                    <a href="#2kings1" class="history">2nd Kings...</a><br>
-                                    <a href="#1chronicles1" class="history">1st Chronicles...</a><br>
-                                    <a href="#2chronicles1" class="history">2nd Chronicles...</a><br>
-                                    <a href="#ezra1" class="history">Ezra...</a><br>
-                                    <a href="#nehemiah1" class="history">Nehemiah...</a><br>
-                                    <a href="#esther1" class="history">Esther...</a>
+                                    <a href="#joshua" class="history">Joshua...</a><br>
+                                    <a href="#judges" class="history">Judges...</a><br>
+                                    <a href="#ruth" class="history">Ruth...</a><br>
+                                    <a href="#1samuel" class="history">1st Samuel...</a><br>
+                                    <a href="#2samuel" class="history">2nd Samuel...</a><br>
+                                    <a href="#1kings" class="history">1st Kings...</a><br>
+                                    <a href="#2kings" class="history">2nd Kings...</a><br>
+                                    <a href="#1chronicles" class="history">1st Chronicles...</a><br>
+                                    <a href="#2chronicles" class="history">2nd Chronicles...</a><br>
+                                    <a href="#ezra" class="history">Ezra...</a><br>
+                                    <a href="#nehemiah" class="history">Nehemiah...</a><br>
+                                    <a href="#esther" class="history">Esther...</a>
                                 </td>
                                 <th class="purpose lightblue">
                                     History
@@ -57,11 +64,11 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="#job1" class="poetry">Job...</a><br>
-                                    <a href="#psalms1" class="poetry">Psalms...</a><br>
-                                    <a href="#proverbs1" class="poetry">Proverbs...</a><br>
-                                    <a href="#ecclesiastes1" class="poetry">Ecclesiastes...</a><br>
-                                    <a href="#songsofsolomon1" class="poetry">Songs of Solomon...</a>
+                                    <a href="#job" class="poetry">Job...</a><br>
+                                    <a href="#psalms" class="poetry">Psalms...</a><br>
+                                    <a href="#proverbs" class="poetry">Proverbs...</a><br>
+                                    <a href="#ecclesiastes" class="poetry">Ecclesiastes...</a><br>
+                                    <a href="#songsofsolomon" class="poetry">Songs of Solomon...</a>
                                 </td>
                                 <th class="purpose magenta">
                                     Poetry
@@ -69,11 +76,11 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="#isaiah1" class="majorprophets">Isaiah...</a><br>
-                                    <a href="#jeremiah1" class="majorprophets">Jeremiah...</a><br>
-                                    <a href="#lamentations1" class="majorprophets">Lamentations...</a><br>
-                                    <a href="#ezekiel1" class="majorprophets">Ezekiel...</a><br>
-                                    <a href="#daniel1" class="majorprophets">Daniel...</a>
+                                    <a href="#isaiah" class="majorprophets">Isaiah...</a><br>
+                                    <a href="#jeremiah" class="majorprophets">Jeremiah...</a><br>
+                                    <a href="#lamentations" class="majorprophets">Lamentations...</a><br>
+                                    <a href="#ezekiel" class="majorprophets">Ezekiel...</a><br>
+                                    <a href="#daniel" class="majorprophets">Daniel...</a>
                                 </td>
                                 <th class="purpose malachite">
                                     Major Prophets
@@ -81,18 +88,18 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="#hosea1" class="prophets">Hosea...</a><br>
-                                    <a href="#joel1" class="prophets">Joel...</a><br>
-                                    <a href="#amos1" class="prophets">Amos...</a><br>
-                                    <a href="#obadiah1" class="prophets">Obadiah...</a><br>
-                                    <a href="#jonah1" class="prophets">Jonah...</a><br>
-                                    <a href="#micah1" class="prophets">Micah...</a><br>
-                                    <a href="#nahum1" class="prophets">Nahum...</a><br>
-                                    <a href="#habakkuk1" class="prophets">Habakkuk...</a><br>
-                                    <a href="#zephaniah1" class="prophets">Zephaniah...</a><br>
-                                    <a href="#haggai1" class="prophets">Haggai...</a><br>
-                                    <a href="#zechariah1" class="prophets">Zechariah...</a><br>
-                                    <a href="#malachi1" class="prophets">Malachi...</a>
+                                    <a href="#hosea" class="prophets">Hosea...</a><br>
+                                    <a href="#joel" class="prophets">Joel...</a><br>
+                                    <a href="#amos" class="prophets">Amos...</a><br>
+                                    <a href="#obadiah" class="prophets">Obadiah...</a><br>
+                                    <a href="#jonah" class="prophets">Jonah...</a><br>
+                                    <a href="#micah" class="prophets">Micah...</a><br>
+                                    <a href="#nahum" class="prophets">Nahum...</a><br>
+                                    <a href="#habakkuk" class="prophets">Habakkuk...</a><br>
+                                    <a href="#zephaniah" class="prophets">Zephaniah...</a><br>
+                                    <a href="#haggai" class="prophets">Haggai...</a><br>
+                                    <a href="#zechariah" class="prophets">Zechariah...</a><br>
+                                    <a href="#malachi" class="prophets">Malachi...</a>
                                 </td>
                                 <th class="purpose green">
                                     Other Prophets
@@ -103,10 +110,10 @@
                         <table>
                             <tr>
                                 <td>
-                                    <a href="#mathew1" class="gospels">Mathew...</a><br>
-                                    <a href="#mark1" class="gospels">Mark...</a><br>
-                                    <a href="#luke1" class="gospels">Luke...</a><br>
-                                    <a href="#john1" class="gospels">John...</a>
+                                    <a href="#mathew" class="gospels">Mathew...</a><br>
+                                    <a href="#mark" class="gospels">Mark...</a><br>
+                                    <a href="#luke" class="gospels">Luke...</a><br>
+                                    <a href="#john" class="gospels">John...</a>
                                 </td>
                                 <th class="purpose gold">
                                     The Gospels
@@ -114,7 +121,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="#acts1" class="history">Acts...</a>
+                                    <a href="#acts" class="history">Acts...</a>
                                 </td>
                                 <th class="purpose lightblue">
                                     History
@@ -122,19 +129,19 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="#romans1" class="letters">Romans...</a><br>
-                                    <a href="#1corinthians1" class="letters">1st Corinthians...</a><br>
-                                    <a href="#2corinthians1" class="letters">2nd Corinthians...</a><br>
-                                    <a href="#galatians1" class="letters">Galatians...</a><br>
-                                    <a href="#ephesians1" class="letters">Ephesians...</a><br>
-                                    <a href="#philippians1" class="letters">Philippians...</a><br>
-                                    <a href="#colossians1" class="letters">Colossians...</a><br>
-                                    <a href="#1thessalonians1" class="letters">1st Thessalonians...</a><br>
-                                    <a href="#2thessalonians1" class="letters">2nd Thessalonians...</a><br>
-                                    <a href="#1timothy1" class="letters">1st Timothy...</a><br>
-                                    <a href="#2timothy1" class="letters">2nd Timothy...</a><br>
-                                    <a href="#titus1" class="letters">Titus...</a><br>
-                                    <a href="#philemon1" class="letters">Philemon...</a>
+                                    <a href="#romans" class="letters">Romans...</a><br>
+                                    <a href="#1corinthians" class="letters">1st Corinthians...</a><br>
+                                    <a href="#2corinthians" class="letters">2nd Corinthians...</a><br>
+                                    <a href="#galatians" class="letters">Galatians...</a><br>
+                                    <a href="#ephesians" class="letters">Ephesians...</a><br>
+                                    <a href="#philippians" class="letters">Philippians...</a><br>
+                                    <a href="#colossians" class="letters">Colossians...</a><br>
+                                    <a href="#1thessalonians" class="letters">1st Thessalonians...</a><br>
+                                    <a href="#2thessalonians" class="letters">2nd Thessalonians...</a><br>
+                                    <a href="#1timothy" class="letters">1st Timothy...</a><br>
+                                    <a href="#2timothy" class="letters">2nd Timothy...</a><br>
+                                    <a href="#titus" class="letters">Titus...</a><br>
+                                    <a href="#philemon" class="letters">Philemon...</a>
                                 </td>
                                 <th class="purpose red">
                                     Paul's Letters
@@ -142,14 +149,14 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="#hebrews1" class="otherletters">Hebrews...</a><br>
-                                    <a href="#james1" class="otherletters">James...</a><br>
-                                    <a href="#1peter1" class="otherletters">1st Peter...</a><br>
-                                    <a href="#2peter1" class="otherletters">2nd Peter...</a><br>
-                                    <a href="#1john1" class="otherletters">1st John...</a><br>
-                                    <a href="#2john1" class="otherletters">2nd John...</a><br>
-                                    <a href="#3john1" class="otherletters">3rd John...</a><br>
-                                    <a href="#jude1" class="otherletters">Jude...</a>
+                                    <a href="#hebrews" class="otherletters">Hebrews...</a><br>
+                                    <a href="#james" class="otherletters">James...</a><br>
+                                    <a href="#1peter" class="otherletters">1st Peter...</a><br>
+                                    <a href="#2peter" class="otherletters">2nd Peter...</a><br>
+                                    <a href="#1john" class="otherletters">1st John...</a><br>
+                                    <a href="#2john" class="otherletters">2nd John...</a><br>
+                                    <a href="#3john" class="otherletters">3rd John...</a><br>
+                                    <a href="#jude" class="otherletters">Jude...</a>
                                 </td>
                                 <th class="purpose darkred">
                                     Other Letters
@@ -174,12 +181,28 @@
                         <a href="#wickednessintheworld">Wickedness in the World</a><br>
                         <a href="#noahandtheflood">Noah and the Flood</a><br>
                         <a href="#godscovenantwithnoah">God’s Covenant With Noah</a><br>
-                        <a href="#sonsofnoah">The Sons of Noah</a>
+                        <a href="#sonsofnoah">The Sons of Noah</a><br>
+                        <a href="#thetableofnations">The Table of Nations</a>
                     </div>
                 </div>
             </div>
             <div class="left-side"></div>
-            <div class="verses-container wide">
+            <div class="verses-container readmode wide">
+                <h2 class="subtitle" id="genesis">The Book of Genesis</h2>
+                <h2 class="subtitle" id="thebeginning">The Beginning</h2>
+                <p class="verse-text">
+                    <long class="verse-number verse-title">1</long> In the beginning God created the heavens and the earth. 
+                    <long class="verse-number verse-title">2</long> Now the earth was formless and empty, darkness was over the surface of the deep, and the Spirit of God was hovering over the waters.
+                    <long class="verse-number verse-title">3</long> And God said, “Let there be light,” and there was light.
+                    <long class="verse-number verse-title">4</long> God saw that the light was good, and he separated the light from the darkness.
+                    <long class="verse-number verse-title">5</long> God called the light “day,” and the darkness he called “night.” And there was evening, and there was morning — the first day. 
+                    <br><br>
+                    <long class="verse-number verse-title">6</long> And God said, “Let there be a vault between the waters to separate water from water.”
+                    <long class="verse-number verse-title">7</long> So God made the vault and separated the water under the vault from the water above it. And it was so.
+                </p>
+            </div>
+            <div class="verses-container versemode wide hidden-mode">
+                <h2 class="subtitle" id="genesis">The Book of Genesis</h2>
                 <h2 class="subtitle" id="thebeginning">The Beginning</h2>
                 <div class="verse">
                     <h2 class="verse-title">Genesis 1:1</h2>
@@ -1128,6 +1151,77 @@
                 <div class="verse">
                     <h2 class="verse-title">Genesis 9:29</h2>
                     <p class="verse-text">Noah lived a total of 950 years, and then he died.</p>
+                </div>
+                <h2 class="subtitle" id="thetableofnations">The Table of Nations</h2>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:1</h2>
+                    <p class="verse-text">This is the account of Shem, Ham and Japheth, Noah’s sons, who themselves had sons after the flood.</p>
+                </div>
+                <h2 class="grouping">The Japhethites</h2>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:2</h2>
+                    <p class="verse-text">The sons of Japheth: Gomer, Magog, Madai, Javan, Tubal, Meshek and Tiras.</p>
+                </div>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:3</h2>
+                    <p class="verse-text">The sons of Gomer: Ashkenaz, Riphath and Togarmah.</p>
+                </div>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:4</h2>
+                    <p class="verse-text">The sons of Javan: Elishah, Tarshish, the Kittites and the Rodanites.</p>
+                </div>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:5</h2>
+                    <p class="verse-text">(From these the maritime peoples spread out into their territories by their clans within their nations, each with its own language.)</p>
+                </div>
+                <h2 class="grouping">The Hamites</h2>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:6</h2>
+                    <p class="verse-text">The sons of Ham: Cush, Egypt, Put and Canaan.</p>
+                </div>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:7</h2>
+                    <p class="verse-text">The sons of Cush: Seba, Havilah, Sabtah, Raamah and Sabteka. The sons of Raamah: Sheba and Dedan.</p>
+                </div>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:8</h2>
+                    <p class="verse-text">Cush was the father of Nimrod, who became a mighty warrior on the earth.</p>
+                </div>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:9</h2>
+                    <p class="verse-text">He was a mighty hunter before the Lord; that is why it is said, “Like Nimrod, a mighty hunter before the Lord.”</p>
+                </div>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:10</h2>
+                    <p class="verse-text">The first centers of his kingdom were Babylon, Uruk, Akkad and Kalneh, in Shinar.</p>
+                </div>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:11</h2>
+                    <p class="verse-text">From that land he went to Assyria, where he built Nineveh, Rehoboth Ir, Calah</p>
+                </div>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:12</h2>
+                    <p class="verse-text">and Resen, which is between Nineveh and Calah — which is the great city.</p>
+                </div>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:13</h2>
+                    <p class="verse-text">Egypt was the father of the Ludites, Anamites, Lehabites, Naphtuhites,</p>
+                </div>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:14</h2>
+                    <p class="verse-text">Pathrusites, Kasluhites (from whom the Philistines came) and Caphtorites.</p>
+                </div>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:15</h2>
+                    <p class="verse-text">Canaan was the father of Sidon his firstborn, and of the Hittites,</p>
+                </div>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:16</h2>
+                    <p class="verse-text">Jebusites, Amorites, Girgashites,</p>
+                </div>
+                <div class="verse">
+                    <h2 class="verse-title">Genesis 10:17</h2>
+                    <p class="verse-text">Hivites, Arkites, Sinites,</p>
                 </div>
             </div>
             <div class="settings-container hidden">
