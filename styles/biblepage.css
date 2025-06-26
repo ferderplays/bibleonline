@@ -1,3 +1,8 @@
+:root {
+    --marker-opacity: 0.35;
+    --marker-text-opacity: 1;
+}
+
 .verse-title, .transliteration, .translation {
     color: rgb(225, 225, 225);
 }
@@ -158,148 +163,148 @@ td a {
 
 /* Base color pallete */
 .law {
-    background: rgba(255, 155, 0, 0.5);
+    background: rgba(255, 155, 0, var(--marker-opacity));
 }
 
 .orange {
-    color: rgba(255, 155, 0, 0.5);
+    color: rgba(255, 155, 0, var(--marker-text-opacity));
 }
 
 .history {
-    background: rgba(0, 255, 255, 0.5);
+    background: rgba(0, 255, 255, var(--marker-opacity));
 }
 
 .lightblue {
-    color: rgba(0, 255, 255, 0.5);
+    color: rgba(0, 255, 255, var(--marker-text-opacity));
 }
 
 .poetry {
-    background: rgba(255, 0, 255, 0.5);
+    background: rgba(255, 0, 255, var(--marker-opacity));
 }
 
 .magenta {
-    color: rgba(255, 0, 255, 0.5);
+    color: rgba(255, 0, 255, var(--marker-text-opacity));
 }
 
 .majorprophets {
-    background: rgba(11, 218, 81, 0.5);
+    background: rgba(11, 218, 81, var(--marker-opacity));
 }
 
 .malachite {
-    color: rgba(11, 218, 81, 0.5);
+    color: rgba(11, 218, 81, var(--marker-text-opacity));
 }
 
 .prophets {
-    background: rgba(0, 100, 0, 0.5);
+    background: rgba(0, 100, 0, var(--marker-opacity));
 }
 
 .green {
-    color: rgba(0, 100, 0, 0.5);
+    color: rgba(0, 100, 0, var(--marker-text-opacity));
 }
 
 .gospels {
-    background: rgba(255, 215, 0, 0.5);
+    background: rgba(255, 215, 0, var(--marker-opacity));
 }
 
 .gold {
-    color: rgba(255, 215, 0, 0.5);
+    color: rgba(255, 215, 0, var(--marker-text-opacity));
 }
 
 .letters {
-    background: rgba(255, 0, 0, 0.5);
+    background: rgba(255, 0, 0, var(--marker-opacity));
 }
 
 .red {
-    color: rgba(255, 0, 0, 0.5);
+    color: rgba(255, 0, 0, var(--marker-text-opacity));
 }
 
 .otherletters {
-    background: rgba(100, 0, 0, 0.5);
+    background: rgba(100, 0, 0, var(--marker-opacity));
 }
 
 .darkred {
-    color: rgba(100, 0, 0, 0.5);
+    color: rgba(100, 0, 0, var(--marker-text-opacity));
 }
 
 .prophecy {
-    background: rgba(100, 0, 200, 0.5);
+    background: rgba(100, 0, 200, var(--marker-opacity));
 }
 
 .purple {
-    color: rgba(100, 0, 200, 0.5);
+    color: rgba(100, 0, 200, var(--marker-text-opacity));
 }
 
 /* RGB mode color palette */
 .rgbmode .law {
-    background: rgba(255, 0, 0, 0.5);
+    background: rgba(255, 0, 0, var(--marker-opacity));
 }
 
 .rgbmode .orange {
-    color: rgba(255, 0, 0, 0.5);
+    color: rgba(255, 0, 0, var(--marker-text-opacity));
 }
 
 .rgbmode .history {
-    background: rgba(255, 155, 0, 0.5);
+    background: rgba(255, 155, 0, var(--marker-opacity));
 }
 
 .rgbmode .lightblue {
-    color: rgba(255, 155, 0, 0.5);
+    color: rgba(255, 155, 0, var(--marker-text-opacity));
 }
 
 .rgbmode .poetry {
-    background: rgba(255, 255, 0, 0.5);
+    background: rgba(255, 255, 0, var(--marker-opacity));
 }
 
 .rgbmode .magenta {
-    color: rgba(255, 255, 0, 0.5);
+    color: rgba(255, 255, 0, var(--marker-text-opacity));
 }
 
 .rgbmode .majorprophets {
-    background: rgba(155, 255, 0, 0.5);
+    background: rgba(155, 255, 0, var(--marker-opacity));
 }
 
 .rgbmode .malachite {
-    color: rgba(155, 255, 0, 0.5);
+    color: rgba(155, 255, 0, var(--marker-text-opacity));
 }
 
 .rgbmode .prophets {
-    background: rgba(0, 255, 0, 0.5);
+    background: rgba(0, 255, 0, var(--marker-opacity));
 }
 
 .rgbmode .green {
-    color: rgba(0, 255, 0, 0.5);
+    color: rgba(0, 255, 0, var(--marker-text-opacity));
 }
 
 .rgbmode .gospels {
-    background: rgba(0, 255, 155, 0.5);
+    background: rgba(0, 255, 155, var(--marker-opacity));
 }
 
 .rgbmode .gold {
-    color: rgba(0, 255, 155, 0.5);
+    color: rgba(0, 255, 155, var(--marker-text-opacity));
 }
 
 .rgbmode .letters {
-    background: rgba(0, 155, 255, 0.5);
+    background: rgba(0, 155, 255, var(--marker-opacity));
 }
 
 .rgbmode .red {
-    color: rgba(0, 155, 255, 0.5);
+    color: rgba(0, 155, 255, var(--marker-text-opacity));
 }
 
 .rgbmode .otherletters {
-    background: rgba(0, 0, 255, 0.5);
+    background: rgba(0, 0, 255, var(--marker-opacity));
 }
 
 .rgbmode .darkred {
-    color: rgba(0, 0, 255, 0.5);
+    color: rgba(0, 0, 255, var(--marker-text-opacity));
 }
 
 .rgbmode .prophecy {
-    background: rgba(255, 0, 255, 0.5);
+    background: rgba(255, 0, 255, var(--marker-opacity));
 }
 
 .rgbmode .purple {
-    color: rgba(255, 0, 255, 0.5);
+    color: rgba(255, 0, 255, var(--marker-text-opacity));
 }
 
 /* Scrollbar stuff */

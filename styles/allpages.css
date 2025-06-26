@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa:wght@400;700&family=Beiruti:wght@200..900&family=Cairo:wght@200..1000&family=Noto+Naskh+Arabic:wght@400..700&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa:wght@400;700&family=Beiruti:wght@200..900&family=Cairo:wght@200..1000&family=Love+Light&family=Noto+Naskh+Arabic:wght@400..700&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap');
 
 * {
     box-sizing: border-box;
@@ -48,12 +48,18 @@ body, html {
 }
 
 .unifraktur {
-    font-family: "UnifrakturMaguntia", cursive;
+    font-family: 'UnifrakturMaguntia', cursive;
 }
 
 .frakturcook {
-    font-family: "UnifrakturCook", cursive;
+    font-family: 'UnifrakturCook', cursive;
 }
+
+.lovelight {
+    font-family: 'Love Light', cursive;
+}
+
+/* arabic fonts */
 
 .amoshref {
     font-family: 'Thuluth', sans-serif;
