@@ -1,7 +1,8 @@
 let areSettingsOpened = false;
 
 let isMemorizationBasic = true,
-    isMemorizationRGB = false;
+    isMemorizationRGB = false,
+    isMemorizationTiktok = false;
 
 let isReadModeActivated = true,
     isVerseModeActivated = false;
@@ -35,11 +36,17 @@ $("#rgbenable").click(function() {
         console.log("RGB mode is already activated");
         return;
     } else {
-        $(".memorizationcolors").addClass("rgbmode");
+        if (isMemorizationBasic) {
+            $(".memorizationcolors").addClass("rgbmode");
+        } else {
+            $(".memorizationcolors").removeClass("tiktokmode");
+            $(".memorizationcolors").addClass("rgbmode");
+        }
         $(".selected-pallete").removeClass("selected-pallete");
         $("#rgbenable").addClass("selected-pallete");
         isMemorizationRGB = true;
         isMemorizationBasic = false;
+        isMemorizationTiktok = false;
     }
 });
 
@@ -48,11 +55,35 @@ $("#basicenable").click(function() {
         console.log("Basic mode is already activated");
         return;
     } else {
-        $(".memorizationcolors").removeClass("rgbmode");
+        if (isMemorizationRGB) {
+            $(".memorizationcolors").removeClass("rgbmode");
+        } else {
+            $(".memorizationcolors").removeClass("tiktokmode");
+        }
         $(".selected-pallete").removeClass("selected-pallete");
         $("#basicenable").addClass("selected-pallete");
         isMemorizationBasic = true;
         isMemorizationRGB = false;
+        isMemorizationTiktok = false;
+    }
+});
+
+$("#tiktokenable").click(function() {
+    if (isMemorizationRGB) {
+        console.log("RGB mode is already activated");
+        return;
+    } else {
+        if (isMemorizationBasic) {
+            $(".memorizationcolors").addClass("tiktokmode");
+        } else {
+            $(".memorizationcolors").removeClass("rgbmodemode");
+            $(".memorizationcolors").addClass("tiktokmode");
+        }
+        $(".selected-pallete").removeClass("selected-pallete");
+        $("#rgbenable").addClass("selected-pallete");
+        isMemorizationTiktok = true;
+        isMemorizationRGB = false;
+        isMemorizationBasic = false;
     }
 });
 
@@ -83,5 +114,24 @@ $("#versemode").click(function() {
 
         isVerseModeActivated = true;
         isReadModeActivated = false;
+    }
+});
+
+$(".searchbutton").click(function() {
+    searchedText = $("#search").val().toLowerCase();
+    console.log(searchedText);
+    if (searchedText === "" || searchedText.includes("\n")) {
+        $(".verse-text").removeClass("searched");
+    } else {
+        $(".verse-text").removeClass("searched");
+        //$(".verse-text:contains(" + searchedText + ")").addClass("searched");  - that was case sensitive
+        $(".verse-text").each(function(i, obj) {
+            if ($(obj).text().toLowerCase().includes(searchedText)) {
+                $(obj).addClass("searched");
+                $("html, body").animate({
+                    scrollTop: $(obj).offset().top - 150
+                }, 50);
+            }
+        });
     }
 });

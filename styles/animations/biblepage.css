@@ -1,3 +1,19 @@
 .chapterlist a:hover {
     color: black;
 }
+
+.searched {
+    animation: 2s writing ease-in;
+}
+
+@keyframes writing {
+    0% {
+        background-size: 0% 100%;
+    }
+    50% {
+        background-size: 50% 100%;
+    }
+    100% {
+        background-size: 100% 100%;
+    }
+}

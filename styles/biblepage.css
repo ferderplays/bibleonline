@@ -3,6 +3,12 @@
     --marker-text-opacity: 1;
 }
 
+
+
+.searched, td a {
+    border-radius: 5px;
+}
+
 .versemode .verse-title, .transliteration, .translation {
     color: rgb(225, 225, 225);
 }
@@ -22,6 +28,16 @@
 
 .verse-title {
     font-weight: bolder;
+}
+
+#search {
+    position: relative;
+    left: 10px;
+    width: 70%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #0099ff;
 }
 
 header {
@@ -141,7 +157,6 @@ header a:hover {
 
 td a {
     padding: 2px;
-    border-radius: 5px;
     color: black;
     text-decoration: none;
     font-size: 15px;
@@ -311,6 +326,79 @@ td a {
     color: rgba(255, 0, 255, var(--marker-text-opacity));
 }
 
+/* Tiktok mode color pallete */
+.tiktokmode .law {
+    background: rgba(255, 0, 255, var(--marker-opacity));
+}
+
+.tiktokmode .orange {
+    color: rgba(255, 0, 255, var(--marker-text-opacity));
+}
+
+.tiktokmode .history {
+    background: rgba(255, 215, 0, var(--marker-opacity));
+}
+
+.tiktokmode .lightblue {
+    color: rgba(255, 215, 0, var(--marker-text-opacity));
+}
+
+.tiktokmode .poetry {
+    background: rgba(0, 255, 255, var(--marker-opacity));
+}
+
+.tiktokmode .magenta {
+    color: rgba(0, 255, 255, var(--marker-text-opacity));
+}
+
+.tiktokmode .majorprophets {
+    background: rgba(50, 205, 50, var(--marker-opacity));
+}
+
+.tiktokmode .malachite {
+    color: rgba(50, 205, 50, var(--marker-text-opacity));
+}
+
+.tiktokmode .prophets {
+    background: rgba(50, 205, 50, var(--marker-opacity));
+}
+
+.tiktokmode .green {
+    color: rgba(50, 205, 50, var(--marker-text-opacity));
+}
+
+.tiktokmode .gospels {
+    background: rgba(128, 0, 128, var(--marker-opacity));
+}
+
+.tiktokmode .gold {
+    color: rgba(128, 0, 128, var(--marker-text-opacity));
+}
+
+.tiktokmode .letters {
+    background: rgba(255, 215, 0, var(--marker-opacity));
+}
+
+.tiktokmode .red {
+    color: rgba(255, 215, 0, var(--marker-text-opacity));
+}
+
+.tiktokmode .otherletters {
+    background: rgba(0, 0, 255, var(--marker-opacity));
+}
+
+.tiktokmode .darkred {
+    color: rgba(0, 0, 255, var(--marker-text-opacity));
+}
+
+.tiktokmode .prophecy {
+    background: rgba(255, 0, 255, var(--marker-opacity));
+}
+
+.tiktokmode .purple {
+    color: rgba(255, 0, 255, var(--marker-text-opacity));
+}
+
 /* Scrollbar stuff */
 
 ::-webkit-scrollbar {
@@ -339,11 +427,15 @@ td a {
     transition: all 0.25s ease-in;
 }
 
-.options-container button.selected, .options-container button.selected-style, .options-container button.selected-pallete, button.selected-mode {
+.options-container button.selected, .options-container button.selected-style, .options-container button.selected-pallete, button.selected-mode, button.searchbutton {
     background: rgb(200, 200, 200);
     border-radius: 25px;
 }
 
 .unselected {
     display: none;
+}
+
+.searched {
+    background: rgba(0, 153, 255, var(--marker-opacity));
 }
