@@ -135,3 +135,8 @@ $(".searchbutton").click(function() {
         });
     }
 });
+
+$(".verse-text").click(function() {
+    if (!$(this).hasClass("highlighted")) $(this).addClass("highlighted");
+    else $(this).removeClass("highlighted");
+});
