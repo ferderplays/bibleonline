@@ -16,13 +16,13 @@ $("#beirutitoggle").click(function() {
         $(".selected-style").removeClass("selected-style");
         $("#beirutitoggle").addClass("selected-style");
         if (isUnifrakturUsed) {
-            $(".verse-text").removeClass("unifraktur");
+            loadFont("unifraktur", "beiruti");
             isUnifrakturUsed = false;
         } else if (isAmiriUsed) {
-            $(".verse-text").removeClass("amiri");
+            loadFont("amiri", "beiruti");
             isAmiriUsed = false;
         } else if (isFrakturcookUsed) {
-            $(".verse-text").removeClass("frakturcook");
+            loadFont("frakturcook", "beiruti");
             isFrakturcookUsed = false;
         }
         isBeirutiUsed = true;
@@ -225,11 +225,19 @@ function loadFont(initialFont, newFont) {
     // beiruti font here does not have a specific font class name, so it is an exception to the casual loading process
     if (newFont === "beiruti") {
         $(".verse-text").removeClass(initialFont);
+        $(".verses-container .subtitle").removeClass(initialFont);
+        $(".verses-container .grouping").removeClass(initialFont);
     } else if (initialFont === "beiruti") { 
         $(".verse-text").addClass(newFont);
+        $(".verses-container .subtitle").addClass(newFont);
+        $(".verses-container .grouping").addClass(newFont);
     } else { 
         // the casual loading process
-        $(".verse-text").removeClass(initialFont); 
+        $(".verse-text").removeClass(initialFont);
+        $(".verses-container .subtitle").removeClass(initialFont);
+        $(".verses-container .grouping").removeClass(initialFont); 
         $(".verse-text").addClass(newFont);
+        $(".verses-container .subtitle").addClass(newFont);
+        $(".verses-container .grouping").addClass(newFont);
     }
 }

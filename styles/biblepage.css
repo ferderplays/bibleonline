@@ -79,8 +79,27 @@ header a:hover {
     top: 50px;
     height: 97vh;
     width: 23vw;
-    overflow-y: scroll;
     z-index: 2;
+}
+
+.booklist {
+    height: 97vh;
+    width: 100%;
+    padding-bottom: 75px;
+}
+
+.chapterlist {
+    width: 35%;
+    overflow-y: scroll;
+}
+
+.memorizationcolors {
+    width: 65%;
+    overflow-y: scroll;
+}
+
+.chapterlist::-webkit-scrollbar {
+    display: none;
 }
 
 .chapterlist a {
@@ -412,6 +431,7 @@ td a {
 ::-webkit-scrollbar-thumb {
     background: #0099ff;
     border-radius: 25px;
+    height: 75px;
 }
 
 .options-container {
