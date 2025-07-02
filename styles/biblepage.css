@@ -70,7 +70,7 @@ header a:hover {
     display: flex;
 }
 
-.grouping {
+.grouping, .book-link {
     font-size: 35px;
 }
 
@@ -466,4 +466,14 @@ td a {
 
 .highlighted {
     background: rgba(255, 155, 0, var(--marker-opacity));
+}
+
+.book-link {
+    background: #0099ff;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+    transition: all 0.25s ease-in;
 }

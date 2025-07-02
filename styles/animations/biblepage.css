@@ -2,6 +2,11 @@
     color: black;
 }
 
+.book-link:hover {
+    background: white;
+    color: #0099ff;
+}
+
 .searched {
     animation: 2s writing ease-in;
 }

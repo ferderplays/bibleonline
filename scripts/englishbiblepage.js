@@ -7,6 +7,10 @@ let isBeirutiUsed = true,
 let isModernSelected = true,
     isFrakturSelected = false,
     isCursiveSelected = false;
+    
+$(document).ready(function() {
+    loadFont(localStorage.getItem("initialfont"), localStorage.getItem("font"));
+});
 
 $("#beirutitoggle").click(function() {
     if (isBeirutiUsed) {
@@ -17,14 +21,19 @@ $("#beirutitoggle").click(function() {
         $("#beirutitoggle").addClass("selected-style");
         if (isUnifrakturUsed) {
             loadFont("unifraktur", "beiruti");
+            saveToLocalStorage("initialfont", "unifraktur");
             isUnifrakturUsed = false;
         } else if (isAmiriUsed) {
             loadFont("amiri", "beiruti");
+            saveToLocalStorage("initialfont", "amiri");
             isAmiriUsed = false;
         } else if (isFrakturcookUsed) {
             loadFont("frakturcook", "beiruti");
+            saveToLocalStorage("initialfont", "frakturcook");
             isFrakturcookUsed = false;
         }
+        
+        saveToLocalStorage("font", "beiruti");
         isBeirutiUsed = true;
     }
 });
@@ -38,17 +47,22 @@ $("#unifrakturtoggle").click(function() {
         $("#unifrakturtoggle").addClass("selected-style");
         if (isFrakturcookUsed) {
             loadFont("frakturcook", "unifraktur");
+            saveToLocalStorage("initialfont", "frakturcook");
             isFrakturcookUsed = false;
         } else if (isBeirutiUsed) {
             loadFont("beiruti", "unifraktur");
+            saveToLocalStorage("initialfont", "beiruti");
             isBeirutiUsed = false;
         } else if (isAmiriUsed) {
             loadFont("amiri", "unifraktur");
+            saveToLocalStorage("initialfont", "amiri");
             isFrakturcookUsed = false;
         } else if (isLovelightUsed) {
             loadFont("lovelight", "unifraktur");
+            saveToLocalStorage("initialfont", "lovelight");
             isLovelightUsed = false;
         }
+        saveToLocalStorage("font", "unifraktur");
         isUnifrakturUsed = true;
     }
 });
@@ -62,17 +76,22 @@ $("#frakturcooktoggle").click(function() {
         $("#frakturcooktoggle").addClass("selected-style");
         if (isUnifrakturUsed) {
             loadFont("unifraktur", "frakturcook");
+            saveToLocalStorage("initialfont", "unifraktur");
             isUnifrakturUsed = false;
         } else if (isBeirutiUsed) {
             loadFont("beiruti", "frakturcook");
+            saveToLocalStorage("initialfont", "beiruti");
             isBeirutiUsed = false;
         } else if (isAmiriUsed) {
             loadFont("amiri", "frakturcook");
+            saveToLocalStorage("initialfont", "amiri");
             isFrakturcookUsed = false;
         } else if (isLovelightUsed) {
             loadFont("lovelight", "frakturcook");
+            saveToLocalStorage("initialfont", "lovelight");
             isLovelightUsed = false;
         }
+        saveToLocalStorage("font", "frakturcook");
         isFrakturcookUsed = true;
     }
 });
@@ -86,17 +105,22 @@ $("#amiritoggle").click(function() {
         $("#amiritoggle").addClass("selected-style");
         if (isUnifrakturUsed) {
             loadFont("unifraktur", "amiri");
+            saveToLocalStorage("initialfont", "unifraktur");
             isUnifrakturUsed = false;
         } else if (isBeirutiUsed) {
             loadFont("beiruti", "amiri");
+            saveToLocalStorage("initialfont", "beiruti");
             isBeirutiUsed = false;
         } else if (isFrakturcookUsed) {
             loadFont("frakturcook", "amiri");
+            saveToLocalStorage("initialfont", "frakturcook");
             isFrakturcookUsed = false;
         } else if (isLovelightUsed) {
             loadFont("lovelight", "amiri");
+            saveToLocalStorage("initialfont", "lovelight");
             isLovelightUsed = false;
         }
+        saveToLocalStorage("font", "amiri");
         isAmiriUsed = true;
     }
 });
@@ -220,6 +244,13 @@ $("#cursiveenable").click(function() {
         isModernSelected = false;
     }
 });
+
+function saveToLocalStorage(itemName, itemValue) {
+    if (typeof(Storage) != null) {
+        localStorage.setItem(itemName, itemValue);
+        localStorage.setItem(itemName, itemValue);
+    }
+}
 
 function loadFont(initialFont, newFont) {
     // beiruti font here does not have a specific font class name, so it is an exception to the casual loading process

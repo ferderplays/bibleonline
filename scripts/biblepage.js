@@ -7,6 +7,30 @@ let isMemorizationBasic = true,
 let isReadModeActivated = true,
     isVerseModeActivated = false;
 
+$(document).ready(function() {
+    mode = localStorage.getItem("mode");
+    console.log(mode);
+    if (mode != null) {
+        switch (mode) {
+            case "versebyverse":
+                $(".verses-container").addClass("versemode");
+                $(".selected-mode").removeClass("selected-mode");
+                $("#versemode").addClass("selected-mode");
+                isVerseModeActivated = true;
+                isReadModeActivated = false;
+                break;
+
+            case "reading":
+                $(".verses-container").removeClass("versemode");
+                $(".selected-mode").removeClass("selected-mode");
+                $("#readmode").addClass("selected-mode");
+                isReadModeActivated = true;
+                isVerseModeActivated = false;
+                break;
+        }
+    }
+});
+
 $("#settingstoggle").click(function() {
     if (areSettingsOpened) {
         $(".settings-container").addClass("hidden");
@@ -97,6 +121,8 @@ $("#readmode").click(function() {
         $(".selected-mode").removeClass("selected-mode");
         $("#readmode").addClass("selected-mode");
 
+        saveToLocalStorage("mode", "reading");
+
         isReadModeActivated = true;
         isVerseModeActivated = false;
     }
@@ -111,6 +137,8 @@ $("#versemode").click(function() {
         
         $(".selected-mode").removeClass("selected-mode");
         $("#versemode").addClass("selected-mode");
+
+        saveToLocalStorage("mode", "versebyverse");
 
         isVerseModeActivated = true;
         isReadModeActivated = false;
@@ -140,3 +168,19 @@ $(".verse-text").click(function() {
     if (!$(this).hasClass("highlighted")) $(this).addClass("highlighted");
     else $(this).removeClass("highlighted");
 });
+
+$("#clearstorage").click(function() {
+    clearStorage();
+});
+
+function clearStorage() {
+    localStorage.removeItem("initialfont");
+    localStorage.removeItem("font");
+}
+
+function saveToLocalStorage(itemName, itemValue) {
+    if (typeof(Storage) != null) {
+        localStorage.setItem(itemName, itemValue);
+        localStorage.setItem(itemName, itemValue);
+    }
+}
