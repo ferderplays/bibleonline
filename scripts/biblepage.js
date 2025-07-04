@@ -8,7 +8,8 @@ let isReadModeActivated = true,
     isVerseModeActivated = false;
 
 $(document).ready(function() {
-    mode = localStorage.getItem("mode");
+    mode = localStorage.getItem("mode"); 
+    memorizationColors = localStorage.getItem("memorizationcolors");
     console.log(mode);
     if (mode != null) {
         switch (mode) {
@@ -28,6 +29,9 @@ $(document).ready(function() {
                 isVerseModeActivated = false;
                 break;
         }
+    }
+    if (memorizationColors != null) {
+        loadMemorizationColors(localStorage.getItem("initialmemorizationcolors"), memorizationColors);
     }
 });
 
@@ -68,6 +72,9 @@ $("#rgbenable").click(function() {
         }
         $(".selected-pallete").removeClass("selected-pallete");
         $("#rgbenable").addClass("selected-pallete");
+
+        saveToLocalStorage("memorizationcolors", "rgbmode");
+
         isMemorizationRGB = true;
         isMemorizationBasic = false;
         isMemorizationTiktok = false;
@@ -80,12 +87,17 @@ $("#basicenable").click(function() {
         return;
     } else {
         if (isMemorizationRGB) {
-            $(".memorizationcolors").removeClass("rgbmode");
+            loadMemorizationColors("rgbmode", "basic");
+            saveToLocalStorage("initialmemorizationcolors", "rgbmode");
         } else {
-            $(".memorizationcolors").removeClass("tiktokmode");
+            loadMemorizationColors("tiktokmode", "basic");
+            saveToLocalStorage("initialmemorizationcolors", "tiktokmode");
         }
         $(".selected-pallete").removeClass("selected-pallete");
         $("#basicenable").addClass("selected-pallete");
+
+        saveToLocalStorage("memorizationcolors", "basic");
+
         isMemorizationBasic = true;
         isMemorizationRGB = false;
         isMemorizationTiktok = false;
@@ -93,18 +105,22 @@ $("#basicenable").click(function() {
 });
 
 $("#tiktokenable").click(function() {
-    if (isMemorizationRGB) {
-        console.log("RGB mode is already activated");
+    if (isMemorizationTiktok) {
+        console.log("Tiktok mode is already activated");
         return;
     } else {
         if (isMemorizationBasic) {
-            $(".memorizationcolors").addClass("tiktokmode");
+            loadMemorizationColors("basic", "tiktokmode");
+            saveToLocalStorage("initialmemorizationcolors", "basic");
         } else {
-            $(".memorizationcolors").removeClass("rgbmodemode");
-            $(".memorizationcolors").addClass("tiktokmode");
+            loadMemorizationColors("rgbmode", "tiktokmode");
+            saveToLocalStorage("initialmemorizationcolors", "rgbmode");
         }
         $(".selected-pallete").removeClass("selected-pallete");
-        $("#rgbenable").addClass("selected-pallete");
+        $("#tiktokenable").addClass("selected-pallete");
+
+        saveToLocalStorage("memorizationcolors", "tiktokmode");
+
         isMemorizationTiktok = true;
         isMemorizationRGB = false;
         isMemorizationBasic = false;
@@ -176,11 +192,55 @@ $("#clearstorage").click(function() {
 function clearStorage() {
     localStorage.removeItem("initialfont");
     localStorage.removeItem("font");
+    localStorage.removeItem("mode");
+    localStorage.removeItem("initialmemorizationcolors");
+    localStorage.removeItem("memorizationcolors");
 }
 
 function saveToLocalStorage(itemName, itemValue) {
     if (typeof(Storage) != null) {
         localStorage.setItem(itemName, itemValue);
         localStorage.setItem(itemName, itemValue);
+    }
+}
+
+function loadMemorizationColors(initialColors, newColors) {
+    if (newColors == "basic") {
+        $(".memorizationcolors").removeClass(initialColors);
+    } else if (initialColors == "basic") {
+        $(".memorizationcolors").addClass(newColors);
+    } else {
+        $(".memorizationcolors").removeClass(initialColors);
+        $(".memorizationcolors").addClass(newColors);
+    }
+}
+
+function loadFont(initialFont, newFont) {
+    // beiruti font here does not have a specific font class name, so it is an exception to the casual loading process
+    if (newFont === "beiruti") {
+        $(".verse-text").removeClass(initialFont);
+        $(".verses-container .subtitle").removeClass(initialFont);
+        $(".verses-container .grouping").removeClass(initialFont);
+
+        saveToLocalStorage("initialfont", initialFont);
+        saveToLocalStorage("font", "beiruti");
+    } else if (initialFont === "beiruti") { 
+        $(".verse-text").addClass(newFont);
+        $(".verses-container .subtitle").addClass(newFont);
+        $(".verses-container .grouping").addClass(newFont);
+
+        saveToLocalStorage("initialfont", "beiruti");
+        saveToLocalStorage("font", newFont);
+    } else { 
+        // the casual loading process
+        $(".verse-text").removeClass(initialFont);
+        $(".verses-container .subtitle").removeClass(initialFont);
+        $(".verses-container .grouping").removeClass(initialFont); 
+        $(".verse-text").addClass(newFont);
+        $(".verses-container .subtitle").addClass(newFont);
+        $(".verses-container .grouping").addClass(newFont);
+
+        saveToLocalStorage("initialfont", initialFont);
+        saveToLocalStorage("font", newFont);
     }
 }
