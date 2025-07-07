@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Online</title>
+    <link rel="stylesheet" href="../../styles/allpages.css">
+    <link rel="stylesheet" href="../../styles/biblepage.css">
+    <link rel="stylesheet" href="../../styles/animations/biblepage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div>
+                <a href="/bibleonline/">Bible Online</a>
+            </div>
+            <div class="options-container">
+                <button id="versemode">Verse Mode</button>
+                <button id="readmode" class="selected-mode">Read Mode</button>
+            </div>
+            <div class="searchfield options-container">
+                <textarea name="searcharea" id="search"></textarea>
+                <button class="searchbutton">Search</button>
+            </div>
+            <button id="settingstoggle">Settings</button>
+        </header>
+        <div class="title-container">
+            <h3 class="title">The Holy Bible</h3>
+            <h2 class="subtitle">The Book of Life</h2>
+        </div>
+        <div class="bible-container">
+            <div class="chapterlist-container">
+                <h2 class="grouping">The Old Testament</h2>
+                <div class="booklist">
+                    <div class="memorizationcolors">
+                        <table>
+                            <tr>
+                                <td>
+                                    <a href="/bibleonline/bible/" class="law">Genesis...</a><br>
+                                    <a href="/bibleonline/bible/exodus/" class="law">Exodus...</a><br>
+                                    <a href="/bibleonline/bible/leviticus/" class="law">Leviticus...</a><br>
+                                    <a href="#numbers" class="law">Numbers...</a><br>
+                                    <a href="#deuteronomy" class="law">Deuteronomy...</a>
+                                </td>
+                                <th class="purpose orange">
+                                    Law
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#joshua" class="history">Joshua...</a><br>
+                                    <a href="#judges" class="history">Judges...</a><br>
+                                    <a href="#ruth" class="history">Ruth...</a><br>
+                                    <a href="#1samuel" class="history">1st Samuel...</a><br>
+                                    <a href="#2samuel" class="history">2nd Samuel...</a><br>
+                                    <a href="#1kings" class="history">1st Kings...</a><br>
+                                    <a href="#2kings" class="history">2nd Kings...</a><br>
+                                    <a href="#1chronicles" class="history">1st Chronicles...</a><br>
+                                    <a href="#2chronicles" class="history">2nd Chronicles...</a><br>
+                                    <a href="#ezra" class="history">Ezra...</a><br>
+                                    <a href="#nehemiah" class="history">Nehemiah...</a><br>
+                                    <a href="#esther" class="history">Esther...</a>
+                                </td>
+                                <th class="purpose lightblue">
+                                    History
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#job" class="poetry">Job...</a><br>
+                                    <a href="#psalms" class="poetry">Psalms...</a><br>
+                                    <a href="#proverbs" class="poetry">Proverbs...</a><br>
+                                    <a href="#ecclesiastes" class="poetry">Ecclesiastes...</a><br>
+                                    <a href="#songsofsolomon" class="poetry">Songs of Solomon...</a>
+                                </td>
+                                <th class="purpose magenta">
+                                    Poetry
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#isaiah" class="majorprophets">Isaiah...</a><br>
+                                    <a href="#jeremiah" class="majorprophets">Jeremiah...</a><br>
+                                    <a href="#lamentations" class="majorprophets">Lamentations...</a><br>
+                                    <a href="#ezekiel" class="majorprophets">Ezekiel...</a><br>
+                                    <a href="#daniel" class="majorprophets">Daniel...</a>
+                                </td>
+                                <th class="purpose malachite">
+                                    Major Prophets
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#hosea" class="prophets">Hosea...</a><br>
+                                    <a href="#joel" class="prophets">Joel...</a><br>
+                                    <a href="#amos" class="prophets">Amos...</a><br>
+                                    <a href="#obadiah" class="prophets">Obadiah...</a><br>
+                                    <a href="#jonah" class="prophets">Jonah...</a><br>
+                                    <a href="#micah" class="prophets">Micah...</a><br>
+                                    <a href="#nahum" class="prophets">Nahum...</a><br>
+                                    <a href="#habakkuk" class="prophets">Habakkuk...</a><br>
+                                    <a href="#zephaniah" class="prophets">Zephaniah...</a><br>
+                                    <a href="#haggai" class="prophets">Haggai...</a><br>
+                                    <a href="#zechariah" class="prophets">Zechariah...</a><br>
+                                    <a href="#malachi" class="prophets">Malachi...</a>
+                                </td>
+                                <th class="purpose green">
+                                    Other Prophets
+                                </th>
+                            </tr>
+                        </table>
+                        <h2 class="grouping">The New Testament</h2>
+                        <table>
+                            <tr>
+                                <td>
+                                    <a href="#mathew" class="gospels">Mathew...</a><br>
+                                    <a href="#mark" class="gospels">Mark...</a><br>
+                                    <a href="#luke" class="gospels">Luke...</a><br>
+                                    <a href="#john" class="gospels">John...</a>
+                                </td>
+                                <th class="purpose gold">
+                                    The Gospels
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#acts" class="history">Acts...</a>
+                                </td>
+                                <th class="purpose lightblue">
+                                    History
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#romans" class="letters">Romans...</a><br>
+                                    <a href="#1corinthians" class="letters">1st Corinthians...</a><br>
+                                    <a href="#2corinthians" class="letters">2nd Corinthians...</a><br>
+                                    <a href="#galatians" class="letters">Galatians...</a><br>
+                                    <a href="#ephesians" class="letters">Ephesians...</a><br>
+                                    <a href="#philippians" class="letters">Philippians...</a><br>
+                                    <a href="#colossians" class="letters">Colossians...</a><br>
+                                    <a href="#1thessalonians" class="letters">1st Thessalonians...</a><br>
+                                    <a href="#2thessalonians" class="letters">2nd Thessalonians...</a><br>
+                                    <a href="#1timothy" class="letters">1st Timothy...</a><br>
+                                    <a href="#2timothy" class="letters">2nd Timothy...</a><br>
+                                    <a href="#titus" class="letters">Titus...</a><br>
+                                    <a href="#philemon" class="letters">Philemon...</a>
+                                </td>
+                                <th class="purpose red">
+                                    Paul's Letters
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#hebrews" class="otherletters">Hebrews...</a><br>
+                                    <a href="#james" class="otherletters">James...</a><br>
+                                    <a href="#1peter" class="otherletters">1st Peter...</a><br>
+                                    <a href="#2peter" class="otherletters">2nd Peter...</a><br>
+                                    <a href="#1john" class="otherletters">1st John...</a><br>
+                                    <a href="#2john" class="otherletters">2nd John...</a><br>
+                                    <a href="#3john" class="otherletters">3rd John...</a><br>
+                                    <a href="#jude" class="otherletters">Jude...</a>
+                                </td>
+                                <th class="purpose darkred">
+                                    Other Letters
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#revelation1" class="prophecy">Revelation...</a>
+                                </td>
+                                <th class="purpose purple">
+                                    Prophecy
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="chapterlist">
+                        <ul id="genesischapters">
+                            <li>
+                                <a href="#theburntoffering">The Burnt Offering</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="left-side"></div>
+            <div class="verses-container wide">
+                <h2 class="subtitle">The Book of Leviticus</h2>
+                <h2 class="subtitle" id="theburntoffering">The Burnt Offering</h2>
+                <long class="verse-text">
+                    <long class="verse-title">Leviticus 1:1</long>
+                    The Lord called to Moses and spoke to him from the tent of meeting. He said, 
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>2</long>
+                    “Speak to the Israelites and say to them: ‘When anyone among you brings an offering to the Lord, bring as your offering an animal from either the herd or the flock.
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>3</long>
+                    “‘If the offering is a burnt offering from the herd, you are to offer a male without defect. You must present it at the entrance to the tent of meeting so that it will be acceptable to the Lord. 
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>4</long>
+                    You are to lay your hand on the head of the burnt offering, and it will be accepted on your behalf to make atonement for you. 
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>5</long>
+                    You are to slaughter the young bull before the Lord, and then Aaron’s sons the priests shall bring the blood and splash it against the sides of the altar at the entrance to the tent of meeting. 
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>6</long>
+                    You are to skin the burnt offering and cut it into pieces. 
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>7</long>
+                    The sons of Aaron the priest are to put fire on the altar and arrange wood on the fire. 
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>8</long>
+                    Then Aaron’s sons the priests shall arrange the pieces, including the head and the fat, on the wood that is burning on the altar. 
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>9</long>
+                    You are to wash the internal organs and the legs with water, and the priest is to burn all of it on the altar. It is a burnt offering, a food offering, an aroma pleasing to the Lord.
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>10</long>
+                    “‘If the offering is a burnt offering from the flock, from either the sheep or the goats, you are to offer a male without defect. 
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>11</long>
+                    You are to slaughter it at the north side of the altar before the Lord, and Aaron’s sons the priests shall splash its blood against the sides of the altar. 
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>12</long>
+                    You are to cut it into pieces, and the priest shall arrange them, including the head and the fat, on the wood that is burning on the altar. 
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>13</long>
+                    You are to wash the internal organs and the legs with water, and the priest is to bring all of them and burn them on the altar. It is a burnt offering, a food offering, an aroma pleasing to the Lord.
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>14</long>
+                    “‘If the offering to the Lord is a burnt offering of birds, you are to offer a dove or a young pigeon. 
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>15</long>
+                    The priest shall bring it to the altar, wring off the head and burn it on the altar; its blood shall be drained out on the side of the altar. 
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>16</long>
+                    He is to remove the crop and the feathers and throw them down east of the altar where the ashes are. 
+                </long>
+                <long class="verse-text">
+                    <long class="verse-title"><span class="hidden-text">Leviticus 1:</span>17</long>
+                    He shall tear it open by the wings, not dividing it completely, and then the priest shall burn it on the wood that is burning on the altar. It is a burnt offering, a food offering, an aroma pleasing to the Lord.
+                </long>
+                <!-- Leviticus chapter 1 through 10 will be finished by the end of June 7th (today) -->
+                <br>
+                <br>
+                <a href="/bibleonline/bible/leviticus/" class="book-link">
+                    The Book of Leviticus
+                </a>
+            </div>
+            <div class="settings-container hidden">
+                <h3 class="settings-grouping">Script</h3>
+                <div class="options-container" id="scripttoggler">
+                    <button id="modernenable" class="selected">Modern</button>
+                    <button id="cursiveenable">Cursive</button>
+                    <button id="frakturenable">Fraktur</button>
+                </div>
+                <h3 class="settings-subgrouping">Style</h3>
+                <div class="options-container">
+                    <button id="beirutitoggle" class="selected-style">Beiruti</button>
+                    <button id="amiritoggle">Amiri</button>
+                    <button id="unifrakturtoggle" class="unselected">Unifraktur Maguntia</button>
+                    <button id="frakturcooktoggle" class="unselected">Unifraktur Cook</button>
+                    <button id="lovelighttoggle" class="unselected">Love Light</button>
+                    <button id="areftoggle" class="unselected">Aref Ruqaa</button>
+                </div>
+                <h3 class="settings-grouping">Marker pallete:</h3>
+                <div class="options-container">
+                    <button id="basicenable" class="selected-pallete">Basic</button>
+                    <button id="tiktokenable">Tiktok</button>
+                    <button id="rgbenable">RGB</button>
+                </div>
+                <button id="clearstorage">Default Settings</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../scripts/englishbiblepage.js"></script>
+    <script src="../../scripts/biblepage.js"></script>
+</body>
+</html>
