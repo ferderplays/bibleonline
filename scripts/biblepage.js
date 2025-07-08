@@ -7,6 +7,8 @@ let isMemorizationBasic = true,
 let isReadModeActivated = true,
     isVerseModeActivated = false;
 
+let highlightColor = "orange";
+
 $(document).ready(function() {
     mode = localStorage.getItem("mode"); 
     memorizationColors = localStorage.getItem("memorizationcolors");

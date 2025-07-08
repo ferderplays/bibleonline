@@ -451,7 +451,7 @@ td a {
     transition: all 0.25s ease-in;
 }
 
-.options-container button.selected, .options-container button.selected-style, .options-container button.selected-pallete, button.selected-mode, button.searchbutton {
+.options-container button.selected, .options-container button.selected-style, .options-container button.selected-pallete, .options-container button.selected-highlighter, button.selected-mode, button.searchbutton {
     background: rgb(200, 200, 200);
     border-radius: 25px;
 }
@@ -464,10 +464,6 @@ td a {
     background: rgba(0, 153, 255, var(--marker-opacity));
 }
 
-.highlighted {
-    background: rgba(255, 155, 0, var(--marker-opacity));
-}
-
 .book-link {
     background: #0099ff;
     border-radius: 25px;
@@ -476,4 +472,25 @@ td a {
     padding-right: 5px;
     padding-left: 5px;
     transition: all 0.25s ease-in;
+}
+
+/* Highlighting colors */
+.highlighted {
+    background: rgba(255, 155, 0, var(--marker-opacity));
+}
+
+.highlighted-red {
+    background: rgba(255, 0, 0, var(--marker-opacity));
+}
+
+.highlighted-yellow {
+    background: rgba(255, 255, 0, var(--marker-opacity));
+}
+
+.highlighted-yellowgreen {
+    background: rgba(155, 255, 0, var(--marker-opacity));
+}
+
+.highlighted-green {
+    background: rgba(0, 255, 0, var(--marker-opacity));
 }
